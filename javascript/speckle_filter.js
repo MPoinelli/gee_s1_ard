@@ -367,7 +367,7 @@ var Quegan = function(image) {
       // filter collection over are and by relative orbit
       var s1_coll = ee.ImageCollection('COPERNICUS/S1_GRD_FLOAT')
                 .filterBounds(image.geometry())
-                .filter(ee.Filter.eq('instrumentMode', 'IW'))
+                .filter(ee.Filter.eq('instrumentMode', 'EW'))
                 .filter(ee.Filter.listContains('transmitterReceiverPolarisation', ee.List(image.get('transmitterReceiverPolarisation')).get(-1)))
                 // we need to get this from the image
                 //.filter(ee.Filter.and(ee.Filter.eq('transmitterReceiverPolarisation', 'VH'),ee.Filter.eq('transmitterReceiverPolarisation', 'VH')) )
@@ -457,4 +457,3 @@ var Quegan = function(image) {
   return coll.map(Quegan);
 
 };
-
