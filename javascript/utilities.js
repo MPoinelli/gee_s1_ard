@@ -1,4 +1,3 @@
-
 // File: utilities.js
 // Version: v1.2
 // Date: 2021-02-11
@@ -93,4 +92,3 @@ Download.ImageCollection.toAsset = function(collection, assetFolder, options) {
 }
 
 exports.Download = Download;
-
